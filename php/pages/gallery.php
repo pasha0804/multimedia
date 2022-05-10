@@ -66,6 +66,43 @@
 <div class="ttl-index">
     <h1 class="h1">Gallery</h1>
 </div>
-
+<div class="row">
+    <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+        <img
+                src="../../Thumbnails/eldenring.jpg"
+                class="w-100 shadow-1-strong rounded mb-4"
+                alt="Boat on Calm Water"
+        />
+        <img
+                src="../../Thumbnails/liurnia.jpg"
+                class="w-100 shadow-1-strong rounded mb-4"
+                alt="Wintry Mountain Landscape"
+        />
+    </div>
+    <div class="col-lg-4 mb-4 mb-lg-0">
+        <img
+                src="../../Thumbnails/leyndell.jpg"
+                class="w-100 shadow-1-strong rounded mb-4"
+                alt="Mountains in the Clouds"
+        />
+        <img
+                src="../../Thumbnails/altus_plateau.jpg"
+                class="w-100 shadow-1-strong rounded mb-4"
+                alt="Boat on Calm Water"
+        />
+    </div>
+    <div class="col-lg-4 mb-4 mb-lg-0">
+        <img
+                src="../../Thumbnails/siofra-river.jpg"
+                class="w-100 shadow-1-strong rounded mb-4"
+                alt="Waves at Sea"
+        />
+        <img
+                src="../../Thumbnails/castle.jpg"
+                class="w-100 shadow-1-strong rounded mb-4"
+                alt="Yosemite National Park"
+        />
+    </div>
+</div>
 </body>
 </html>

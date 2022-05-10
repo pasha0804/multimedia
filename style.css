@@ -53,3 +53,10 @@ body {
 .navbar-scrolled {
     background-color: #ffede7;
 }
+
+.row {
+    -moz-user-select: none !important;
+    -webkit-user-select: none !important;
+    user-select: none !important;
+    pointer-events: none !important;
+}
