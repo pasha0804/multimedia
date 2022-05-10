@@ -28,7 +28,7 @@
                     <a class="nav-link px-3" href="#">home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link px-3" href="wgbs.php" target="_blank2">wgbs</a>
+                    <a class="nav-link px-3" href="wgbs.php">wgbs</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link px-3" href="gif.php">gif</a>
