@@ -1,3 +1,7 @@
+<?php
+include('../backend/b-reduzieren.php'); // schliesst b-reduzieren aus dem Backend verzeichnis ein, um die Bilder zu reduzieren (Erklärung dazu in der Datei b-reduzieren.php)
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -5,119 +9,92 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="../../style.css" type="text/css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Index - Alperen Yilmaz</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="icon" href="../../img/icon.jpg">
+    <title>Gallery - AY</title>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg fixed-top navbar-scroll shadow-0" style="background-color: #ffede7;">
+<nav class="navbar navbar-expand-sm navbar-light" id="neubar">
     <div class="container">
-        <a class="navbar-brand" href="#">navigation</a>
-        <button class="navbar-toggler ps-0" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarExample01"
-                aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="d-flex justify-content-start align-items-center">
-        <i class="fa fa-bars" aria-hidden="true"></i>
-      </span>
+        <a class="navbar-brand" href="#">Alperen Yilmaz</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarExample01">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item active">
-                    <a class="nav-link px-3" href="index.php">home</a>
+        <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto ">
+                <li class="nav-item">
+                    <a class="nav-link mx-2" href="index.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link px-3" href="wgbs.php">wgbs</a>
+                    <a class="nav-link mx-2" href="wgbs.php">WGBS</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link px-3" href="gif.php">gif</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link px-3" href="#">gallery</a>
+                    <a class="nav-link mx-2" href="gif.php">GIF</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link px-3" href="video.php">video</a>
+                    <a class="nav-link mx-2 active" aria-current="page" href="#">Gallery</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link px-3" href="journal.php">journal</a>
-                </li>
-            </ul>
-
-            <ul class="navbar-nav flex-row">
-                <li class="nav-item">
-                    <a class="nav-link pe-3" href="#!">
-                        <i class="fa fa-twitter" aria-hidden="true"></i>
-                    </a>
+                    <a class="nav-link mx-2" href="video.php">Video</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link px-3" href="#!">
-                        <i class="fa fa-github" aria-hidden="true"></i>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link ps-3" href="#!">
-                        <i class="fa fa-instagram" aria-hidden="true"></i>
-                    </a>
+                    <a class="nav-link mx-2" href="journal.php">Journal</a>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
-
-<div class="ttl-index">
+<div class="ttl-gallery">
     <h1 class="h1">Gallery</h1>
+    <hr>
+    <button type="button" class="btn btn-info">
+        <a href="gallery.php" style="color: black">
+            Reset
+        </a>
+    </button>
 </div>
-<div class="row">
-    <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-        <img
-                src="../../Thumbnails/eldenring.jpg"
-                class="w-100 shadow-1-strong rounded mb-4"
-                alt="Boat on Calm Water"
-        />
-        <img
-                src="../../Thumbnails/liurnia.jpg"
-                class="w-100 shadow-1-strong rounded mb-4"
-                alt="Wintry Mountain Landscape"
-        />
-    </div>
-    <div class="col-lg-4 mb-4 mb-lg-0">
-        <img
-                src="../../Thumbnails/leyndell.jpg"
-                class="w-100 shadow-1-strong rounded mb-4"
-                alt="Mountains in the Clouds"
-        />
-        <img
-                src="../../Thumbnails/altus_plateau.jpg"
-                class="w-100 shadow-1-strong rounded mb-4"
-                alt="Boat on Calm Water"
-        />
-    </div>
-    <div class="col-lg-4 mb-4 mb-lg-0">
-        <img
-                src="../../Thumbnails/siofra-river.jpg"
-                class="w-100 shadow-1-strong rounded mb-4"
-                alt="Waves at Sea"
-        />
-        <img
-                src="../../Thumbnails/castle.jpg"
-                class="w-100 shadow-1-strong rounded mb-4"
-                alt="Yosemite National Park"
-        />
-    </div>
+<div class="gallery">
+    <a href="#" id="th1"><img src="../../Thumbnails/1.jpg"
+        style="opacity:1;filter:alpha(opacity=100)"
+        onmouseout="this.style.opacity=1;this.filters.alpha.opacity=100"
+        onmouseover="this.style.opacity=0.6;this.filters.alpha.opacity=60">
+    </a>
+    <a href="#" id="th2"><img src="../../Thumbnails/2.jpg"
+                              style="opacity:1;filter:alpha(opacity=100)"
+                              onmouseout="this.style.opacity=1;this.filters.alpha.opacity=100"
+                              onmouseover="this.style.opacity=0.6;this.filters.alpha.opacity=60">
+    </a>
+    <a href="#" id="th3"><img src="../../Thumbnails/3.jpg"
+                              style="opacity:1;filter:alpha(opacity=100)"
+                              onmouseout="this.style.opacity=1;this.filters.alpha.opacity=100"
+                              onmouseover="this.style.opacity=0.6;this.filters.alpha.opacity=60">
+    </a>
+    <a href="#" id="th4"><img src="../../Thumbnails/4.jpg"
+                              style="opacity:1;filter:alpha(opacity=100)"
+                              onmouseout="this.style.opacity=1;this.filters.alpha.opacity=100"
+                              onmouseover="this.style.opacity=0.6;this.filters.alpha.opacity=60">
+    </a>
+    <a href="#" id="th5"><img src="../../Thumbnails/5.jpg"
+                              style="opacity:1;filter:alpha(opacity=100)"
+                              onmouseout="this.style.opacity=1;this.filters.alpha.opacity=100"
+                              onmouseover="this.style.opacity=0.6;this.filters.alpha.opacity=60">
+    </a>
+    <a href="#" id="th6"><img src="../../Thumbnails/6.jpg"
+                              style="opacity:1;filter:alpha(opacity=100)"
+                              onmouseout="this.style.opacity=1;this.filters.alpha.opacity=100"
+                              onmouseover="this.style.opacity=0.6;this.filters.alpha.opacity=60">
+    </a>
 </div>
-<!-- Trigger the Modal -->
-<img id="myImg" src="img_snow.jpg" alt="Snow" style="width:100%;max-width:300px">
-
-<!-- The Modal -->
-<div id="myModal" class="modal">
-
-    <!-- The Close Button -->
-    <span class="close">&times;</span>
-
-    <!-- Modal Content (The Image) -->
-    <img class="modal-content" id="img01">
-
-    <!-- Modal Caption (Image Text) -->
-    <div id="caption"></div>
+<div class="original">
+    <img src="../../jpeg/altus_plateau.jpg" id="img-orig1" width="500vw">
+    <img src="../../jpeg/castle.jpg" id="img-orig2" width="500vw">
+    <img src="../../jpeg/eldenring.jpg" id="img-orig3" width="500vw">
+    <img src="../../jpeg/leyndell.jpg" id="img-orig4" width="500vw">
+    <img src="../../jpeg/liurnia.jpg" id="img-orig5" width="500vw">
+    <img src="../../jpeg/siofra-river.jpg" id="img-orig6" width="500vw">
 </div>
+<script src="../../js/preview.js"></script>
 </body>
 </html>
